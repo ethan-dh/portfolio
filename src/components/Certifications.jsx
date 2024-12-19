@@ -7,7 +7,8 @@ import {
 } from "lucide-react";
 import React from "react";
 
-import cambridge from "../assets/CV_Ehan_DELAINEHENNECART.pdf";
+import cambridge from "../assets/CAMBRIDGE.jpeg";
+import anssi from "../assets/Attestation_MOOC_ANSSI.pdf";
 
 const Certifications = () => {
   return (
@@ -20,7 +21,7 @@ const Certifications = () => {
       <div className="mt-12 grid grid-cols-2 grid-rows-2 gap-4 ">
         <a
           href={cambridge} // Replace with the actual path to your certificate
-          download="Cambridge_English_Certificate.pdf"
+          download="CEC_Ethan_DELAINEHENNECART.jpeg"
           className="group duration-200 hover:bg-neutral-800 rounded-xl w-full bg-neutral-900 p-8 flex justify-between items-center cursor-pointer"
         >
           <div>
@@ -34,7 +35,7 @@ const Certifications = () => {
             <Minus className="text-amber-600" />
           </div>
         </a>
-        <div className="group duration-200 hover:bg-neutral-800 rounded-xl w-full bg-neutral-900 p-8 flex justify-between items-center cursor-pointer">
+        {/* <div className="group duration-200 hover:bg-neutral-800 rounded-xl w-full bg-neutral-900 p-8 flex justify-between items-center cursor-pointer">
           <div>
             <h3 className="group-hover:text-amber-600 text-2xl">Linux</h3>
             <p className="break-words text-neutral-500">
@@ -45,8 +46,12 @@ const Certifications = () => {
             <ArrowDown className="text-amber-600 group-hover:translate-y-3 duration-200" />
             <Minus className="text-amber-600" />
           </div>
-        </div>
-        <div className="group duration-200 hover:bg-neutral-800 rounded-xl w-full bg-neutral-900 p-8 flex justify-between items-center cursor-pointer">
+        </div> */}
+        <a
+          href={anssi}
+          download="Attestation_MOOC_ANSSI.pdf"
+          className="group duration-200 hover:bg-neutral-800 rounded-xl w-full bg-neutral-900 p-8 flex justify-between items-center cursor-pointer"
+        >
           <div>
             <h3 className="group-hover:text-amber-600 text-2xl">
               Cybersécurité
@@ -57,8 +62,8 @@ const Certifications = () => {
             <ArrowDown className="text-amber-600 group-hover:translate-y-3 duration-200" />
             <Minus className="text-amber-600" />
           </div>
-        </div>
-        <div className="group duration-200 hover:bg-neutral-800 rounded-xl w-full bg-neutral-900 p-8 flex justify-between items-center cursor-pointer">
+        </a>
+        {/* <div className="group duration-200 hover:bg-neutral-800 rounded-xl w-full bg-neutral-900 p-8 flex justify-between items-center cursor-pointer">
           <div>
             <h3 className="group-hover:text-amber-600 text-2xl">
               Cybersécurité
@@ -71,7 +76,7 @@ const Certifications = () => {
             <ArrowDown className="text-amber-600 group-hover:translate-y-3 duration-200" />
             <Minus className="text-amber-600" />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -9,31 +9,45 @@ import Documents from "./components/Documents";
 import Certifications from "./components/Certifications";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Projets from "./components/Projets";
+import { useState } from "react";
 
 export default function App() {
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState({ type: "", value: "" });
+
+  const handleContactClick = (type, value, e) => {
+    e.preventDefault();
+    setModalContent({ type, value });
+    setShowModal(true);
+  };
+
   return (
     <div className="bg-neutral-950 h-full selection:text-white selection:bg-amber-600">
       <Navbar />
       <div class="grid grid-cols-3 gap-4 w-4/5 mx-auto ">
         <div class="fixed right-0 col-span-1 bg-white m-24 rounded-xl w-1/4 p-4 flex flex-col gap-8">
-          <img
+          {/* <img
             src={ethan}
-            /* L'image est dans /public et on ne peut pas importer ce qui vient du dossier public */ className="rounded-lg"
             alt="Ethan"
-          />
+          /> */}
           <div>
-            <h2 className="text-center font-bold text-xl">Ethan</h2>
+            <h2 className="text-center font-bold text-xl">
+              Ethan DELAINE--HENNECART
+            </h2>
           </div>
 
-          <div className="flex flex-row justify-center gap-4 mb-4">
-            <a
+          <div className="flex flex-col gap-4">
+            <h2 className="text-center font-semibold">Me contacter:</h2>
+
+            <div className="flex flex-row justify-center gap-4 mb-4">
+              {/* <a
               href="https://instagram.com/ethan_inshape"
               target="_blank"
               rel="noreferrer"
             >
               <div className="p-2 hover:bg-neutral-200 duration-200 rounded-lg">
                 <Instagram size={18} className="text-amber-600" />{" "}
-                {/* Icone Instagram, classe pour changer la couleur (vu que l'icone est un svg, la couleur du texte change la couleur de l'icone) */}
               </div>
             </a>
             <a
@@ -43,21 +57,27 @@ export default function App() {
             >
               <div className="p-2 hover:bg-neutral-200 duration-200 rounded-lg">
                 <Facebook size={18} className="text-amber-600" />{" "}
-                {/* Icone Facebook, classe pour changer la couleur (vu que l'icone est un svg, la couleur du texte change la couleur de l'icone) */}
               </div>
-            </a>
-            <a href="tel:+33631070881">
-              <div className="p-2 hover:bg-neutral-200 duration-200 rounded-lg">
-                <Phone size={18} className="text-amber-600" />{" "}
-                {/* Icone Telephone, classe pour changer la couleur (vu que l'icone est un svg, la couleur du texte change la couleur de l'icone) */}
-              </div>
-            </a>
-            <a href="mailto:ethan.delaine@icloud.com">
-              <div className="p-2 hover:bg-neutral-200 duration-200 rounded-lg">
-                <Mail size={18} className="text-amber-600" />{" "}
-                {/* Icone Mail, classe pour changer la couleur (vu que l'icone est un svg, la couleur du texte change la couleur de l'icone) */}
-              </div>
-            </a>
+            </a> */}
+              <a
+                href="tel:+33631070881"
+                onClick={(e) => handleContactClick("phone", "+33631070881", e)}
+              >
+                <div className="p-2 hover:bg-neutral-200 duration-200 rounded-lg">
+                  <Phone size={18} className="text-amber-600" />{" "}
+                </div>
+              </a>
+              <a
+                href="mailto:ethan.delaine@icloud.com"
+                onClick={(e) =>
+                  handleContactClick("email", "ethan.delaine@icloud.com", e)
+                }
+              >
+                <div className="p-2 hover:bg-neutral-200 duration-200 rounded-lg">
+                  <Mail size={18} className="text-amber-600" />{" "}
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -72,11 +92,51 @@ export default function App() {
           <Nav />
           <Competences />
           <Experience />
+          <Projets />
           <Documents />
           <Certifications />
-          <Footer />
         </div>
       </div>
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-lg">
+            <h3 className="text-lg font-bold mb-4">
+              {modalContent.type === "phone" ? "Téléphone" : "Email"}
+            </h3>
+            <p className="mb-4">{modalContent.value}</p>
+            <div className="flex gap-4">
+              <button
+                className="px-4 py-2 bg-black text-white rounded hover:bg-neutral-800"
+                onClick={() => {
+                  navigator.clipboard.writeText(modalContent.value);
+                  setShowModal(false);
+                }}
+              >
+                Copier
+              </button>
+              <button
+                className="px-4 py-2 bg-black text-white rounded hover:bg-neutral-800"
+                onClick={() => {
+                  if (modalContent.type === "phone") {
+                    window.location.href = `tel:${modalContent.value}`;
+                  } else {
+                    window.location.href = `mailto:${modalContent.value}`;
+                  }
+                  setShowModal(false);
+                }}
+              >
+                {modalContent.type === "phone" ? "Appeler" : "Envoyer un email"}
+              </button>
+              <button
+                className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+                onClick={() => setShowModal(false)}
+              >
+                Fermer
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
