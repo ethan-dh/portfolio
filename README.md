@@ -4,7 +4,7 @@
 
 ## Pour installer le site:
 
-- (Installer Node.js)[https://nodejs.org/fr)]
+- Installer [Node.js](https://nodejs.org/fr)
 
 - Créer un dossier
 - Y mettre les fichiers
