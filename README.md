@@ -1,14 +1,15 @@
-# Ethan DELAIN--HENNECART
+# Portfolio - Ethan DELAINE--HENNECART
 
-## Portfolio
+## 🚀 [Voir le portfolio en ligne](https://portfolio-ethan-dh.vercel.app/)
 
-## Pour installer le site:
+## ⚙️ Installation locale
 
-- Installer [Node.js](https://nodejs.org/fr)
+Pour installer et exécuter ce projet localement, suivez ces étapes :
 
-- Créer un dossier
-- Y mettre les fichiers
-- Ouvrir le dossier dans le terminal
-- Faire`npm install`
-- Lancer le site: `npm start`
-- Compiler le site: `npm run build`
+1. Installer [Node.js](https://nodejs.org/fr)
+
+2. Faire `npm install`
+
+3. Lancer le site: `npm start`
+
+4. Compiler le site: `npm run build`
