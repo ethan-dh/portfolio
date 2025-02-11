@@ -347,7 +347,10 @@ nav > ul > li {
   color: #a3a3a3;
 }
 
-/* Experience section */
+/* ************************************************** */
+/* EXPERIENCES */
+/* ************************************************** */
+
 .experience-section {
   margin-bottom: 3rem;
 }
@@ -397,7 +400,10 @@ nav > ul > li {
   width: 66.666667%;
 }
 
-/* Projects section */
+/* ************************************************** */
+/* PROJETS */
+/* ************************************************** */
+
 .projects-section {
   display: flex;
   flex-direction: column;
@@ -459,7 +465,9 @@ nav > ul > li {
   color: #a3a3a3;
 }
 
-/* Documents section */
+/* ************************************************** */
+/* DOCUMENTS */
+/* ************************************************** */
 .documents-section,
 .certifications-section {
   margin-top: 3rem;
@@ -544,8 +552,10 @@ nav > ul > li {
   transform: translateY(0.75rem);
 }
 
-/* Container principal */
+/* ************************************************** */
+/* GROS CONTAINER */
+/* ************************************************** */
 .page-container {
-  background-color: #0a0a0a; /* équivalent à neutral-950 */
+  background-color: #0a0a0a;
   min-height: 100vh;
 }
