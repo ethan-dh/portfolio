@@ -1,0 +1,3 @@
+- mettre stages
+- update projets
+- faire tabs projets / stage / diplomes
