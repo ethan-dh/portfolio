@@ -11,6 +11,9 @@ html {
   --gris: #0a0a0a;
   --gris-clair: #121212;
   --orange: #d97706;
+  --bg: #ffffff;
+  --bg-hover: #f0f0f0;
+  --bg-card: #e8e8e8;
 }
 
 a {
@@ -22,14 +25,14 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #fff;
+  color: #111;
   height: 100%;
   padding-bottom: 100px;
-  background-color: var(--gris);
+  background-color: var(--bg);
 }
 
 * {
-  color: white;
+  color: inherit;
   list-style: none;
 }
 
@@ -57,13 +60,14 @@ nav > ul > li {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  color: white;
+  color: #111;
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 2rem 0;
   width: 100%;
   backdrop-filter: blur(4px);
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .nav-list {
@@ -75,11 +79,12 @@ nav > ul > li {
   padding: 1rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
+  color: #111;
 }
 
 .nav-link:hover {
   color: var(--orange);
-  background-color: var(--gris-clair);
+  background-color: #f0f0f0;
 }
 
 .lucide-icon {
@@ -93,7 +98,7 @@ nav > ul > li {
 }
 
 .main-container {
-  background-color: var(--gris);
+  background-color: var(--bg);
   height: 100%;
 }
 
@@ -107,7 +112,7 @@ nav > ul > li {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: white;
+  background-color: #111;
   margin: 6rem 6rem 0 0;
   border-radius: 0.75rem;
   width: 25%;
@@ -119,7 +124,7 @@ nav > ul > li {
 
 .profile-name {
   text-align: center;
-  color: var(--gris);
+  color: #ffffff;
   font-weight: bold;
   font-size: 1.25rem;
 }
@@ -132,7 +137,7 @@ nav > ul > li {
 
 .contact-title {
   text-align: center;
-  color: var(--gris);
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -151,7 +156,7 @@ nav > ul > li {
 }
 
 .icon-container:hover {
-  background-color: #e5e5e5;
+  background-color: #2a2a2a;
 }
 
 .icon {
@@ -171,25 +176,27 @@ nav > ul > li {
   font-size: 4.5rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: #111;
 }
 
 .header-subtitle {
   font-size: 3.75rem;
   font-weight: bold;
-  color: #525252;
+  color: #888888;
 }
 
 .header-description {
   margin-top: 1rem;
-  color: #737373;
+  color: #555555;
 }
 
 .header-link {
-  color: #a3a3a3;
+  color: var(--orange);
 }
 
 .header-link:hover {
   text-decoration: underline;
+  color: var(--orange);
 }
 
 /* ************************************************** */
@@ -206,6 +213,7 @@ nav > ul > li {
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: #111;
 }
 
 .sommaire-list {
@@ -221,7 +229,7 @@ nav > ul > li {
 }
 
 .sommaire-item:hover {
-  background-color: #171717;
+  background-color: #f0f0f0;
 }
 
 .sommaire-link {
@@ -240,6 +248,7 @@ nav > ul > li {
 .sommaire-heading {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #111;
 }
 
 .sommaire-item:hover .sommaire-heading {
@@ -247,7 +256,7 @@ nav > ul > li {
 }
 
 .sommaire-description {
-  color: #737373;
+  color: #666666;
   width: 66.666667%;
 }
 
@@ -274,12 +283,13 @@ nav > ul > li {
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
+  color: #111;
 }
 
 .section-subtitle {
   font-size: 3rem;
   font-weight: bold;
-  color: #525252;
+  color: #999999;
 }
 
 /* ************************************************** */
@@ -315,7 +325,7 @@ nav > ul > li {
 }
 
 .competence-card:hover {
-  background-color: #262626;
+  background-color: #f0f0f0;
 }
 
 .competence-icon {
@@ -337,6 +347,7 @@ nav > ul > li {
 
 .competence-title {
   font-weight: bold;
+  color: #111;
 }
 
 .competence-card:hover .competence-title {
@@ -344,7 +355,7 @@ nav > ul > li {
 }
 
 .competence-description {
-  color: #a3a3a3;
+  color: #666666;
 }
 
 /* ************************************************** */
@@ -364,7 +375,7 @@ nav > ul > li {
 }
 
 .experience-timeline {
-  border-right: 4px solid white;
+  border-right: 4px solid #111;
   width: 0;
 }
 
@@ -388,15 +399,16 @@ nav > ul > li {
 .experience-title {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #111;
 }
 
 .experience-description {
-  color: #d4d4d4;
+  color: #444444;
   width: 66.666667%;
 }
 
 .experience-date {
-  color: #737373;
+  color: #888888;
   width: 66.666667%;
 }
 
@@ -411,8 +423,8 @@ nav > ul > li {
 }
 
 .tabs-list {
-  background-color: #262626;
-  color: #a3a3a3;
+  background-color: #e0e0e0;
+  color: #555;
   display: inline-flex;
   height: 2.25rem;
   width: fit-content;
@@ -424,7 +436,7 @@ nav > ul > li {
 
 .tabs-trigger {
   background-color: transparent;
-  color: #a3a3a3;
+  color: #555;
   display: inline-flex;
   height: calc(100% - 1px);
   flex: 1;
@@ -443,14 +455,14 @@ nav > ul > li {
 }
 
 .tabs-trigger:hover {
-  color: #d4d4d4;
+  color: #111;
 }
 
 .tabs-trigger.active,
 .tabs-trigger[data-state="active"] {
-  background-color: var(--gris);
-  color: white;
-  border: 1px solid #404040;
+  background-color: #ffffff;
+  color: #111;
+  border: 1px solid #cccccc;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
@@ -478,7 +490,7 @@ nav > ul > li {
 .experience-placeholder {
   padding: 2rem;
   text-align: center;
-  color: #737373;
+  color: #888888;
   font-style: italic;
 }
 
@@ -507,11 +519,11 @@ nav > ul > li {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   border-radius: 0.75rem;
-  background-color: #171717;
+  background-color: #f0f0f0;
 }
 
 .project-card:hover {
-  background-color: #262626;
+  background-color: #e0e0e0;
 }
 
 .project-icon {
@@ -537,6 +549,7 @@ nav > ul > li {
   font-weight: bold;
   font-size: 1rem;
   transition: color 0.2s;
+  color: #111;
 }
 
 .project-card:hover .project-title {
@@ -544,7 +557,7 @@ nav > ul > li {
 }
 
 .project-description {
-  color: #a3a3a3;
+  color: #666666;
 }
 
 /* ************************************************** */
@@ -566,7 +579,7 @@ nav > ul > li {
 .document-card,
 .certification-card {
   width: 100%;
-  background-color: #171717;
+  background-color: #f0f0f0;
   padding: 2rem;
   border-radius: 0.75rem;
   display: flex;
@@ -580,7 +593,7 @@ nav > ul > li {
 
 .document-card:hover,
 .certification-card:hover {
-  background-color: #262626;
+  background-color: #e0e0e0;
 }
 
 .document-content,
@@ -605,10 +618,11 @@ nav > ul > li {
   font-size: 1.5rem;
   font-weight: bold;
   transition: color 0.2s;
+  color: #111;
 }
 
 .certification-description {
-  color: #737373;
+  color: #666666;
   word-break: break-words;
 }
 
@@ -638,7 +652,7 @@ nav > ul > li {
 /* GROS CONTAINER */
 /* ************************************************** */
 .page-container {
-  background-color: #0a0a0a;
+  background-color: var(--bg);
   margin-left: 6rem;
   width: 55%;
 }
