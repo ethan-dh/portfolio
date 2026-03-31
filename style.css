@@ -304,7 +304,6 @@ nav > ul > li {
 
 .competences-grid {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 0.25rem;
 }
